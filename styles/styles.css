@@ -35,12 +35,12 @@ body::before {
 }
 
 a {
-  color: inherit;
+  color: #fff;
   text-decoration: none;
   margin: 10px 10px;
   padding: 5px 5px;
-  -webkit-transition: all .2s ease-in;
-  transition: all .2s ease-in;
+  -webkit-transition: all .2s ease-out;
+  transition: all .2s ease-out;
 }
 
 a:hover {
@@ -53,8 +53,101 @@ a:hover {
   border-bottom: 4px solid yellow;
 }
 
+.anim {
+  overflow: hidden;
+  position: relative;
+  display: block;
+}
+
+.anim:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
+  -webkit-animation: animate-1 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: animate-1 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  background-color: #000;
+}
+
+.anim:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateX(-101%);
+          transform: translateX(-101%);
+  -webkit-animation: animate-2 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: animate-2 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  background-color: #fff;
+}
+
+.anim:nth-of-type(1):before, .anim:nth-of-type(1):after {
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.anim:nth-of-type(2):before, .anim:nth-of-type(2):after {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+@-webkit-keyframes animate-1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+}
+
+@keyframes animate-1 {
+  0% {
+    -webkit-transform: translateX(-100%);
+            transform: translateX(-100%);
+  }
+  100% {
+    -webkit-transform: translateX(101%);
+            transform: translateX(101%);
+  }
+}
+
+@-webkit-keyframes animate-2 {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
+
+@keyframes animate-2 {
+  0% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+  100% {
+    -webkit-transform: translateX(200%);
+            transform: translateX(200%);
+  }
+}
+
 h1 {
+  display: block;
   font-weight: bold;
+}
+
+h4 {
+  display: block;
 }
 
 .content {
@@ -84,6 +177,7 @@ h1 {
 
 .name {
   color: yellow;
+  background-color: rgba(0, 0, 0, 0.05);
 }
 
 @media screen and (max-width: 460px) {
