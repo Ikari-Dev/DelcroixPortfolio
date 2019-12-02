@@ -11,6 +11,9 @@ html {
 }
 
 body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   background: #fff;
   width: 100%;
   height: 100%;
@@ -22,12 +25,10 @@ body::before {
   content: '';
   position: absolute;
   background-color: #262626;
-  top: -10vh;
+  top: 40%;
   left: 0;
-  -webkit-transform: rotate(160deg);
-          transform: rotate(160deg);
-  width: 400%;
-  height: 400%;
+  width: 100%;
+  height: 100%;
   z-index: -1;
   -webkit-box-shadow: 0 0 10px #262626;
           box-shadow: 0 0 10px #262626;
@@ -37,6 +38,19 @@ a {
   color: inherit;
   text-decoration: none;
   margin: 10px 10px;
+  padding: 5px 5px;
+  -webkit-transition: all .2s ease-in;
+  transition: all .2s ease-in;
+}
+
+a:hover {
+  color: yellow;
+  border-bottom: 4px solid yellow;
+}
+
+.active {
+  color: yellow;
+  border-bottom: 4px solid yellow;
 }
 
 h1 {
@@ -51,13 +65,14 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: auto auto;
+  margin: 30vh auto;
 }
 
-.navliste {
+.titlehead {
+  margin-bottom: 5vh;
+}
+
+.navlist {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,5 +80,20 @@ h1 {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+}
+
+.name {
+  color: yellow;
+}
+
+@media screen and (max-width: 460px) {
+  .navlist {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    border: 4px solid transparent;
+  }
 }
 /*# sourceMappingURL=styles.css.map */
