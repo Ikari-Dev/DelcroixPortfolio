@@ -22,12 +22,12 @@ body::before {
   content: '';
   position: absolute;
   background-color: #262626;
-  top: 34vh;
+  top: -10vh;
   left: 0;
   -webkit-transform: rotate(160deg);
           transform: rotate(160deg);
-  width: 200%;
-  height: 200%;
+  width: 400%;
+  height: 400%;
   z-index: -1;
   -webkit-box-shadow: 0 0 10px #262626;
           box-shadow: 0 0 10px #262626;
