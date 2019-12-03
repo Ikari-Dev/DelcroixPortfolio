@@ -128,13 +128,13 @@ a
 .resou
     animation-delay: 2.3s
 
-.fa-github
+.github
     animation-delay: 1.5s
 
-.fa-linkedin
+.linkedin
     animation-delay: 1.9s
 
-.fa-facebook
+.facebook
     animation-delay: 2.3s
 
 h1
@@ -147,6 +147,7 @@ h4
     font-family: 'Shadows Into Light', cursive
     font-size: 1.5rem
     animation: base 2.3s cubic-bezier(0.77, 0, 0.18, 1) forwards
+    color: #e5b31b
 
 i 
     color: #e5b31b
@@ -165,6 +166,7 @@ i
     margin: 5vh auto
 
 .content 
+    position: relative
     display: flex
     flex-direction: column
     margin: 30vh auto
@@ -193,11 +195,13 @@ i
     .titlehead 
         transform: translateY(-35px)
 
-    .subtitle 
-        color: #e5b31b
 
 @media screen and ( max-height: 645px )
+    
+    .listlink
+        max-height: 10vh
 
     .link 
+        max-height: 10vh
         top: 0
     

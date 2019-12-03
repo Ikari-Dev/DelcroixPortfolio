@@ -230,17 +230,17 @@ a:hover {
           animation-delay: 2.3s;
 }
 
-.fa-github {
+.github {
   -webkit-animation-delay: 1.5s;
           animation-delay: 1.5s;
 }
 
-.fa-linkedin {
+.linkedin {
   -webkit-animation-delay: 1.9s;
           animation-delay: 1.9s;
 }
 
-.fa-facebook {
+.facebook {
   -webkit-animation-delay: 2.3s;
           animation-delay: 2.3s;
 }
@@ -258,6 +258,7 @@ h4 {
   font-size: 1.5rem;
   -webkit-animation: base 2.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
           animation: base 2.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  color: #e5b31b;
 }
 
 i {
@@ -284,6 +285,7 @@ i {
 }
 
 .content {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -331,13 +333,14 @@ i {
     -webkit-transform: translateY(-35px);
             transform: translateY(-35px);
   }
-  .subtitle {
-    color: #e5b31b;
-  }
 }
 
 @media screen and (max-height: 645px) {
+  .listlink {
+    max-height: 10vh;
+  }
   .link {
+    max-height: 10vh;
     top: 0;
   }
 }
