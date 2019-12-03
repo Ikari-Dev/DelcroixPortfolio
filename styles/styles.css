@@ -11,6 +11,7 @@ html {
 }
 
 body {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -32,25 +33,30 @@ body::before {
   z-index: -1;
   -webkit-box-shadow: 0 0 10px #262626;
           box-shadow: 0 0 10px #262626;
+  -webkit-animation: coming 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: coming 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 
 a {
+  opacity: 0;
   color: #fff;
   text-decoration: none;
   margin: 10px 10px;
   padding: 5px 5px;
   -webkit-transition: all .2s ease-out;
   transition: all .2s ease-out;
+  -webkit-animation: text-coming 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: text-coming 1s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 
 a:hover {
-  color: yellow;
-  border-bottom: 4px solid yellow;
+  color: #e5b31b;
+  border-bottom: 4px solid #e5b31b;
 }
 
 .active {
-  color: yellow;
-  border-bottom: 4px solid yellow;
+  color: #e5b31b;
+  border-bottom: 4px solid #e5b31b;
 }
 
 .anim {
@@ -70,7 +76,7 @@ a:hover {
           transform: translateX(-101%);
   -webkit-animation: animate-1 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
           animation: animate-1 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-  background-color: #000;
+  background-color: #262626;
 }
 
 .anim:after {
@@ -141,13 +147,140 @@ a:hover {
   }
 }
 
+@-webkit-keyframes coming {
+  0% {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes coming {
+  0% {
+    -webkit-transform: translateY(60%);
+            transform: translateY(60%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes text-coming {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes text-coming {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes base {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes base {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.contact {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.about {
+  -webkit-animation-delay: 1.7s;
+          animation-delay: 1.7s;
+}
+
+.home {
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+}
+
+.project {
+  -webkit-animation-delay: 2.1s;
+          animation-delay: 2.1s;
+}
+
+.resou {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+
+.fa-github {
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+.fa-linkedin {
+  -webkit-animation-delay: 1.9s;
+          animation-delay: 1.9s;
+}
+
+.fa-facebook {
+  -webkit-animation-delay: 2.3s;
+          animation-delay: 2.3s;
+}
+
 h1 {
   display: block;
   font-weight: bold;
+  -webkit-animation: base 2.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: base 2.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 
 h4 {
   display: block;
+  font-family: 'Shadows Into Light', cursive;
+  font-size: 1.5rem;
+  -webkit-animation: base 2.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: base 2.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+i {
+  color: #e5b31b;
+  font-size: 1.3rem;
+}
+
+.fab {
+  -webkit-animation: text-coming 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: text-coming 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+.link {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  bottom: 0;
+  width: 100%;
+}
+
+.listlink {
+  margin: 5vh auto;
 }
 
 .content {
@@ -162,6 +295,8 @@ h4 {
 }
 
 .titlehead {
+  -webkit-transform: translateY(-15px);
+          transform: translateY(-15px);
   margin-bottom: 5vh;
 }
 
@@ -176,8 +311,8 @@ h4 {
 }
 
 .name {
-  color: yellow;
-  background-color: rgba(0, 0, 0, 0.05);
+  color: #e5b31b;
+  background-color: rgba(0, 0, 0, 0.15);
 }
 
 @media screen and (max-width: 460px) {
@@ -188,6 +323,19 @@ h4 {
             flex-direction: column;
     text-align: center;
     border: 4px solid transparent;
+  }
+}
+
+@media screen and (max-height: 620px) {
+  .titlehead {
+    -webkit-transform: translateY(-25px);
+            transform: translateY(-25px);
+  }
+}
+
+@media screen and (max-height: 645px) {
+  .link {
+    top: 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
