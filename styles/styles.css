@@ -328,8 +328,11 @@ i {
 
 @media screen and (max-height: 600px) {
   .titlehead {
-    -webkit-transform: translateY(-45px);
-            transform: translateY(-45px);
+    -webkit-transform: translateY(-35px);
+            transform: translateY(-35px);
+  }
+  .subtitle {
+    color: #e5b31b;
   }
 }
 
