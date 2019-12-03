@@ -326,7 +326,7 @@ i {
   }
 }
 
-@media screen and (max-height: 620px) {
+@media screen and (max-height: 600px) {
   .titlehead {
     -webkit-transform: translateY(-35px);
             transform: translateY(-35px);
