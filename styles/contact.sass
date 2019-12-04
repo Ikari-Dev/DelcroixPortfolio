@@ -72,7 +72,13 @@ body:after
     max-width: 20vw
     font-size: .5rem
 
+.next 
+    margin-left: 10px 
+
 .back
+    display: flex
+    flex-direction: row
+    justify-content: space-around
     position: fixed
     top: 0
     left: 0
@@ -84,6 +90,7 @@ body:after
         text-decoration: none
         color: #262626
         font-size: 1.2rem
+        transition: all .5s cublic-bezier(.77, 0, .18, 1)
 
     i 
         transition: all .6s cubic-bezier(0.77, 0, 0.18, 1)
@@ -92,7 +99,8 @@ body:after
         transform: rotate(360deg)
 
     a:hover 
-        text-decoration: underline
+        color: #e5b31b
+        margin-top: 5px
 
 
 .fa-chevron-left
@@ -118,5 +126,19 @@ body:after
         opacity: 1
 
 @media screen and ( max-width: 1000px )
+    
     .cont3
         font-size: .5rem
+
+@media screen and ( max-width: 920px )
+   
+    .main
+        flex-direction: column
+        align-items: center
+
+    .cont3, .cont1
+        color: #e5b31b
+        padding: 0 0
+
+        h1:hover 
+            color: #e5b31b
