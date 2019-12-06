@@ -128,8 +128,8 @@ body:after {
   text-decoration: none;
   color: #262626;
   font-size: 1.2rem;
-  -webkit-transition: all 0.5s cublic-bezier(0.77, 0, 0.18, 1);
-  transition: all 0.5s cublic-bezier(0.77, 0, 0.18, 1);
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
 }
 
 .back i {
@@ -138,8 +138,8 @@ body:after {
 }
 
 .back a:hover > i {
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
 }
 
 .back a:hover {
@@ -211,6 +211,11 @@ body:after {
   100% {
     opacity: 1;
   }
+}
+
+.coord {
+  border-right: 2px solid #e5b31b;
+  border-left: 2px solid #e5b31b;
 }
 
 @media screen and (max-width: 1000px) {

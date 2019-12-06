@@ -90,13 +90,13 @@ body:after
         text-decoration: none
         color: #262626
         font-size: 1.2rem
-        transition: all .5s cublic-bezier(.77, 0, .18, 1)
+        transition: all .3s cubic-bezier(.77, 0, .18, 1)
 
     i 
         transition: all .6s cubic-bezier(0.77, 0, 0.18, 1)
 
     a:hover > i
-        transform: rotate(360deg)
+        transform: rotate(-360deg)
 
     a:hover 
         color: #e5b31b
@@ -125,6 +125,11 @@ body:after
     100%
         opacity: 1
 
+
+.coord 
+    border-right: 2px solid #e5b31b
+    border-left: 2px solid #e5b31b
+
 @media screen and ( max-width: 1000px )
     
     .cont3
@@ -142,3 +147,7 @@ body:after
 
         h1:hover 
             color: #e5b31b
+
+
+
+    

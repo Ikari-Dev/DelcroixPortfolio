@@ -25,9 +25,20 @@ body
 .skillmain
     display: flex
     flex-direction: column
-    background-color: red
+    align-items: center
+    justify-content: center
     height: 100%
     width: 100%
+
+    .skill
+        font-family: 'Shadows Into Light', cursive
+        color: #e5b31b
+        font-size: 1.5rem
+        font-weight: bold
+        opacity: 0
+        animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+        animation-delay: 1s
+
     
 
 .menuresume
@@ -60,9 +71,51 @@ body
     font-size: 1.2rem
     font-weight: bold
     
-    h3 
-       color: #e5b31b
+    
+    h3
+        color: #e5b31b
+        opacity: 0
+        animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+        animation-delay: .5s
 
+    p 
+        opacity: 0
+        animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+        animation-delay: .9s
+
+.back
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    position: fixed
+    top: 0
+    left: 0
+    margin-top: 2vh
+    margin-left: 2vw 
+    animation: animcoming-2 3s cubic-bezier(0.77, 0, 0.18, 1) forwards
+
+    a 
+        text-decoration: none
+        color: #262626
+        font-size: 1.2rem
+        transition: all .3s cubic-bezier(.77, 0, .18, 1)
+
+    i 
+        transition: all .6s cubic-bezier(0.77, 0, 0.18, 1)
+
+    a:hover > i
+        transform: rotate(-360deg)
+
+    a:hover 
+        color: #e5b31b
+        margin-top: 5px
+
+    a:active 
+        color: #e5b31b
+        margin-top: 5px
+
+.next 
+    margin-left: 10px 
 
 
 .menu 
@@ -90,10 +143,40 @@ body
             background-color: rgba(229, 179, 27, .8)
             color: black
             font-weight: bold
-            
+
+.fa-chevron-left
+    margin-right: 1vw
+
+.front
+    opacity: 0
+    animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+    animation-delay: .5s
+
+.backend
+    opacity: 0
+    animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+    animation-delay: .7s
+
+.frame
+    opacity: 0
+    animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+    animation-delay: .9s     
 
 @keyframes bodycome
     0%
-        transform: translateX(-200%)
+        transform: translateX(-400%)
     100%
         transform: translateX(0%)
+
+@keyframes textcome
+    0%
+        opacity: 0
+    100%
+        opacity: 1
+
+@keyframes animcoming-2
+    0%
+        transform: translateY(-200%)
+    100%
+        transform: translateY(0%)
+

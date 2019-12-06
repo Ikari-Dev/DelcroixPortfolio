@@ -44,9 +44,26 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  background-color: red;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   height: 100%;
   width: 100%;
+}
+
+.skillmain .skill {
+  font-family: 'Shadows Into Light', cursive;
+  color: #e5b31b;
+  font-size: 1.5rem;
+  font-weight: bold;
+  opacity: 0;
+  -webkit-animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  -webkit-animation-delay: 1s;
+          animation-delay: 1s;
 }
 
 .menuresume {
@@ -104,6 +121,70 @@ body {
 
 .resume .containerresume h3 {
   color: #e5b31b;
+  opacity: 0;
+  -webkit-animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.resume .containerresume p {
+  opacity: 0;
+  -webkit-animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
+.back {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  position: fixed;
+  top: 0;
+  left: 0;
+  margin-top: 2vh;
+  margin-left: 2vw;
+  -webkit-animation: animcoming-2 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: animcoming-2 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+.back a {
+  text-decoration: none;
+  color: #262626;
+  font-size: 1.2rem;
+  -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.back i {
+  -webkit-transition: all 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+  transition: all 0.6s cubic-bezier(0.77, 0, 0.18, 1);
+}
+
+.back a:hover > i {
+  -webkit-transform: rotate(-360deg);
+          transform: rotate(-360deg);
+}
+
+.back a:hover {
+  color: #e5b31b;
+  margin-top: 5px;
+}
+
+.back a:active {
+  color: #e5b31b;
+  margin-top: 5px;
+}
+
+.next {
+  margin-left: 10px;
 }
 
 .menu {
@@ -150,10 +231,38 @@ body {
   font-weight: bold;
 }
 
+.fa-chevron-left {
+  margin-right: 1vw;
+}
+
+.front {
+  opacity: 0;
+  -webkit-animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+.backend {
+  opacity: 0;
+  -webkit-animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  -webkit-animation-delay: .7s;
+          animation-delay: .7s;
+}
+
+.frame {
+  opacity: 0;
+  -webkit-animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  -webkit-animation-delay: .9s;
+          animation-delay: .9s;
+}
+
 @-webkit-keyframes bodycome {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%);
   }
   100% {
     -webkit-transform: translateX(0%);
@@ -163,12 +272,52 @@ body {
 
 @keyframes bodycome {
   0% {
-    -webkit-transform: translateX(-200%);
-            transform: translateX(-200%);
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%);
   }
   100% {
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes textcome {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes textcome {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes animcoming-2 {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes animcoming-2 {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
   }
 }
 /*# sourceMappingURL=about.css.map */
