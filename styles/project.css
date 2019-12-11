@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 100%;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1rem;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 65%;
+  height: 200px;
+  margin: 20px auto;
+}
+
+.container .item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-shadow: 0 0 5px #262626;
+          box-shadow: 0 0 5px #262626;
+  width: 100%;
+  min-height: 30vh;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container .item img {
+  max-width: 30vw;
+  max-height: 30vh;
+}
+
+.container .item .info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: auto;
+  padding-left: 2vw;
+}
+
+.container .item .info h3, .container .item .info p {
+  margin-bottom: 10px;
+}
+
+.info .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.info .link .linkproj {
+  text-decoration: none;
+  padding: 5px;
+  margin: 7px 5px;
+  color: #e5b31b;
+  border: 2px solid #262626;
+  border-radius: 7px;
+  background-color: #262626;
+  cursor: pointer;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+.info .link .linkproj:hover {
+  background-color: white;
+  color: #262626;
+}
+
+.listing-items {
+  list-style: none;
+  padding: 10px 10px;
+}
+
+.listing-items a {
+  text-decoration: none;
+  color: #262626;
+  border-bottom: 4px solid transparent;
+  -webkit-transition: all .2s ease;
+  transition: all .2s ease;
+  padding-bottom: 5px;
+}
+
+.listing-items a:hover {
+  border-bottom: 4px solid #e5b31b;
+  color: #e5b31b;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  height: 15vh;
+  -webkit-box-shadow: 0 0 10px #262626;
+          box-shadow: 0 0 10px #262626;
+}
+
+.nav .listing {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin: auto auto 5px;
+}
+/*# sourceMappingURL=project.css.map */
