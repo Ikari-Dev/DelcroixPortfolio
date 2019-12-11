@@ -5,7 +5,8 @@ let item = new Item("Project 1", "some description", "../ressources/font.jpg", "
 items.push(item)*/
 
 function itemCreate(imgurl = "../ressources/font.jpg", projname = "Project Name",
- projdesc = "Project description, it can be teck, language or whatever, because is it funny to write some description for some project..."){
+ projdesc = "Project description, it can be teck, language or whatever, because is it funny to write some description for some project...",
+ linkcode = "#", linklive = "#"){
 
     let divItem = document.createElement("div")
     divItem.classList.add("item")
@@ -21,11 +22,11 @@ function itemCreate(imgurl = "../ressources/font.jpg", projname = "Project Name"
     divlink.classList.add("link")
     let linkun = document.createElement("a")  
     linkun.classList.add("linkproj")
-    linkun.setAttribute("href", "#")
+    linkun.setAttribute("href", linkcode)
     linkun.innerText = "Code"
     let linkdeux = document.createElement("a")
     linkdeux.classList.add("linkproj")
-    linkdeux.setAttribute("href", "#")
+    linkdeux.setAttribute("href", linklive)
     linkdeux.innerText = "Live"
 
     divInfo.appendChild(htrois)
