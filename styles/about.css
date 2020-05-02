@@ -60,7 +60,7 @@ body {
   font-size: 1.5rem;
   font-weight: bold;
   -webkit-transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  transition: all 0.3s cubic-bezier(0.77, 0, 0.18, 1);
   opacity: 0;
   -webkit-animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
           animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
