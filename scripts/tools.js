@@ -1,21 +1,48 @@
 const frontelement = document.querySelector("a.front")
-frontelement.addEventListener("click", function(){
-   
-    document.querySelector("p.skill").innerHTML = "HTML5, CSS3(SASS), Javascript ES6"
+if(frontelement){
+    frontelement.addEventListener("click", e => {
+    
+        document.querySelector("p.skill").innerHTML = "HTML5, CSS3(SASS), Javascript ES6"
 
-});
+    });
+}
 
 const backelement = document.querySelector("a.backend")
-backelement.addEventListener("click", function(){
-    
-    document.querySelector("p.skill").innerHTML = "PHP7"
+if(backelement){
+    backelement.addEventListener("click", e => {
+        
+        document.querySelector("p.skill").innerHTML = "PHP7"
 
-});
+    });
+}
 
 const frameelement = document.querySelector("a.frame")
-frameelement.addEventListener("click", function(){
-    
-    document.querySelector("p.skill").innerHTML = "Bootstrap"
+if(frameelement){
+    frameelement.addEventListener("click", e => {
+        
+        document.querySelector("p.skill").innerHTML = "Bootstrap"
 
-});
+    });
+}
+
+const card = document.querySelector("div.card")
+if(card){
+    card.addEventListener("mousemove", e => {
+
+        card.style.transform = "scale(1.1)"
+        card.style.transition = ".2s ease-in"
+        document.querySelector(".content").blur(5)
+        
+
+    });
+    
+    card.addEventListener("mouseleave", e => {
+
+        card.style.transform = "scale(1)"
+        card.style.transition = ".2s ease-out"
+        card.style.transform = "rotateY(0deg)"
+        card.style.transform = "rotateX(0deg)"
+
+    });
+}
 

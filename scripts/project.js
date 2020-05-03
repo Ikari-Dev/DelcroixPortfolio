@@ -1,8 +1,8 @@
-/*import Item from '../scripts/Item'
 
-let items = []
-let item = new Item("Project 1", "some description", "../ressources/font.jpg", "#", "#")
-items.push(item)*/
+let itemsPersonnal = []
+let itemsTraining = []
+let item = new Item("L2 Project", "Second year project, we had to create a site on any theme using certain technology.", "../ressources/siteL2.png", "https://github.com/Ikari-Dev/L2WebProject", "https://ikari-dev.github.io/L2WebProject/")
+itemsTraining.push(item)
 
 function itemCreate(imgurl = "../ressources/font.jpg", projname = "Project Name",
  projdesc = "Project description, it can be teck, language or whatever, because is it funny to write some description for some project...",
@@ -46,25 +46,35 @@ function cleancontainer(){
     container.innerHTML = ""
 }
 
-
+const listpersonnal = document.querySelector("a.personnal")
 const listtraining = document.querySelector("a.training")
 listtraining.addEventListener("click", function(){
 
     cleancontainer()
 
-    for(let i=0;i<3;i++){
-        itemCreate()
-    }
+    listpersonnal.classList.remove("active")
+    listtraining.classList.add("active")
+
+    itemsTraining.forEach(element => {
+        itemCreate(element.img, element.name, element.description, element.linkCode, element.linkLive)
+    });
 
 })
 
-const listpersonnal = document.querySelector("a.personnal")
 listpersonnal.addEventListener("click", function(){
    
     cleancontainer()
+    
+    listtraining.classList.remove("active")
+    listpersonnal.classList.add("active")
 
-    for(let i=0;i<5;i++){
+    /*for(let i=0;i<5;i++){
         itemCreate()
-    }
+    }*/
+    
+    itemsPersonnal.forEach(element => {
+        itemCreate(element.img, element.name, element.description, element.linkCode, element.linkLive)
+    });
+    
 
 })
