@@ -62,43 +62,68 @@ body:after {
 }
 
 .main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  margin: auto auto;
+  display: block;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin: auto;
 }
 
-.cont1, .cont2, .cont3 {
-  padding: 2vh 2vw;
-  margin: 5vh 5vw;
-  color: rgba(255, 255, 255, 0.5);
-  font-size: .7rem;
-  -webkit-transition: all 1s cubic-bezier(0.77, 0, 0.18, 1);
-  transition: all 1s cubic-bezier(0.77, 0, 0.18, 1);
-  cursor: pointer;
-  opacity: 0;
-  -webkit-animation: textcoming 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-          animation: textcoming 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-  -webkit-animation-delay: 1.5s;
-          animation-delay: 1.5s;
+.card {
+  width: 35vw;
+  max-width: 320px;
+  margin: 0px auto;
+  background-color: white;
+  -webkit-box-shadow: 0px 5px 20px #999;
+          box-shadow: 0px 5px 20px #999;
+  -webkit-animation: anim-card 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: anim-card 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 
-.cont1:hover > h1, .cont2:hover > h1, .cont3:hover > h1 {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  color: white;
+.card a {
+  color: #333;
+  text-decoration: none;
 }
 
-.cont1 {
-  max-width: 20vw;
-  font-size: .5rem;
+.card:hover {
+  -webkit-box-shadow: 0px 5px 20px #fbd542;
+          box-shadow: 0px 5px 20px #fbd542;
+}
+
+.card:hover .image img {
+  width: 130%;
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.image {
+  height: 35vh;
+  position: relative;
+  overflow: hidden;
+}
+
+.image img {
+  width: 130%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: -webkit-filter .3s ease-in;
+  transition: -webkit-filter .3s ease-in;
+  transition: filter .3s ease-in;
+  transition: filter .3s ease-in, -webkit-filter .3s ease-in;
+}
+
+.corp {
+  text-align: center;
+  padding: 2em 20px;
+  height: 15vh;
+}
+
+.corp div {
+  padding-top: .3rem;
 }
 
 .next {
@@ -144,7 +169,6 @@ body:after {
 
 .back a:hover {
   color: #e5b31b;
-  margin-top: 10px;
 }
 
 .fa-chevron-left {
@@ -199,12 +223,36 @@ body:after {
   0% {
     opacity: 0;
   }
+  99% {
+    opacity: 0;
+  }
   100% {
     opacity: 1;
   }
 }
 
 @keyframes textcoming {
+  0% {
+    opacity: 0;
+  }
+  99% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes anim-card {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim-card {
   0% {
     opacity: 0;
   }
@@ -233,13 +281,6 @@ body:after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-  }
-  .cont3, .cont1 {
-    color: #e5b31b;
-    padding: 0 0;
-  }
-  .cont3 h1:hover, .cont1 h1:hover {
-    color: #e5b31b;
   }
 }
 /*# sourceMappingURL=contact.css.map */

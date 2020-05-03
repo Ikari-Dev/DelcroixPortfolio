@@ -63,6 +63,9 @@ a:hover {
   overflow: hidden;
   position: relative;
   display: block;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .anim:before {
