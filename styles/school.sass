@@ -1,0 +1,56 @@
+$main-color: #e5b31b
+$second-color: #262626
+    
+* 
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body 
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: 100%
+    font-family: 'Open Sans', sans-serif
+    font-size: 1rem
+
+
+.back
+    display: flex
+    flex-direction: row
+    justify-content: space-around
+    position: fixed
+    top: 0
+    left: 0
+    margin-top: 2vh
+    margin-left: 2vw 
+    animation: animcoming-2 3s cubic-bezier(0.77, 0, 0.18, 1) forwards
+
+    a 
+        text-decoration: none
+        color: #262626
+        font-size: 1.2rem
+        transition: all .3s cubic-bezier(.77, 0, .18, 1)
+
+    i 
+        transition: all .6s cubic-bezier(0.77, 0, 0.18, 1)
+
+    a:hover > i
+        transform: rotate(-360deg)
+
+    a:hover 
+        color: #e5b31b
+        
+
+.next 
+    margin-left: 10px 
+
+.fa-chevron-left
+    margin-right: 1vw
+
+
+@keyframes animcoming-2
+    0%
+        transform: translateY(-200%)
+    100%
+        transform: translateY(0%)

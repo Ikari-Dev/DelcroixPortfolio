@@ -51,6 +51,7 @@ body {
   transition: .2s ease-in;
   -webkit-animation: anim-item 0.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
           animation: anim-item 0.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  cursor: pointer;
 }
 
 .container .item img {
@@ -192,6 +193,8 @@ body {
   height: 15vh;
   -webkit-box-shadow: 0 0 10px #262626;
           box-shadow: 0 0 10px #262626;
+  -webkit-animation: anim-menu 3s cubic-bezier(0.77, 0.5, 0.18, 1) forwards;
+          animation: anim-menu 3s cubic-bezier(0.77, 0.5, 0.18, 1) forwards;
 }
 
 .nav .listing {
@@ -203,6 +206,28 @@ body {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: auto auto 5px;
+}
+
+@-webkit-keyframes anim-menu {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+}
+
+@keyframes anim-menu {
+  0% {
+    -webkit-transform: translateY(-200%);
+            transform: translateY(-200%);
+  }
+  100% {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
 }
 
 @-webkit-keyframes animcoming-2 {
