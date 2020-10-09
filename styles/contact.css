@@ -292,15 +292,16 @@ body:after {
   }
 }
 
-@media screen and (max-width: 920px) {
-  .main {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+@media screen and (max-height: 840px) {
+  .content {
+    background-color: #262626;
+  }
+  .card {
+    width: 90%;
+    height: 120%;
+  }
+  .back a {
+    color: white;
   }
 }
 /*# sourceMappingURL=contact.css.map */

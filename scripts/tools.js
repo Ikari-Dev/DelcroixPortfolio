@@ -11,7 +11,7 @@ const backelement = document.querySelector("a.backend")
 if(backelement){
     backelement.addEventListener("click", e => {
         
-        document.querySelector("p.skill").innerHTML = "PHP7"
+        document.querySelector("p.skill").innerHTML = "PHP7, Node JS"
 
     });
 }
