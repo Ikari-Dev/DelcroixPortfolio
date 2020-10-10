@@ -1,3 +1,6 @@
+$main-color: #e5b31b
+$second-color: #262626
+
 *  
     box-sizing: border-box
     margin: 0
@@ -32,7 +35,7 @@ body
 
     .skill
         font-family: 'Shadows Into Light', cursive
-        color: #e5b31b
+        color: $main-color
         font-size: 1.5rem
         font-weight: bold 
         transition: all .3s cubic-bezier(0.77, 0, 0.18, 1) forwards
@@ -52,7 +55,7 @@ body
 .menuresume .menu
     display: flex
     flex-direction: column
-    background-color: #262626
+    background-color: $second-color
     height: 100%
     width: 100%
     animation: bodycome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards 
@@ -74,7 +77,7 @@ body
     
     
     h3
-        color: #e5b31b
+        color: $main-color
         opacity: 0
         animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
         animation-delay: .5s
@@ -97,7 +100,7 @@ body
 
     a 
         text-decoration: none
-        color: #262626
+        color: $second-color
         font-size: 1.2rem
         transition: all .2s cubic-bezier(.77, 0, .18, 1)
 
@@ -108,11 +111,11 @@ body
         transform: rotate(-360deg)
 
     a:hover 
-        color: #e5b31b
+        color: $main-color
         
 
     a:active 
-        color: #e5b31b
+        color: $main-color
         
 
 .next 
@@ -138,7 +141,7 @@ body
             margin-bottom: 10px
             padding: 5px 9vw
             width: 100%
-            color: #e5b31b
+            color: $main-color
 
         a:hover 
             background-color: rgba(229, 179, 27, .8)
@@ -161,7 +164,12 @@ body
 .frame
     opacity: 0
     animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
-    animation-delay: .9s     
+    animation-delay: .9s 
+
+.data    
+    opacity: 0
+    animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+    animation-delay: 1.1s 
 
 @keyframes bodycome
     0%
@@ -181,3 +189,25 @@ body
     100%
         transform: translateY(0%)
 
+@media screen and ( max-height: 840px )
+   
+    .content    
+        background-color: $second-color
+        flex-direction: column
+
+    .card
+        width: 90%
+        height: 120%
+
+    .back a
+        color: white
+        z-index: 10
+
+    .menuresume
+        flex-direction: row
+       
+    .skillmain
+        flex-direction: row
+
+    .containerresume p
+        color: white

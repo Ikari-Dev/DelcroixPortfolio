@@ -259,6 +259,14 @@ body {
           animation-delay: .9s;
 }
 
+.data {
+  opacity: 0;
+  -webkit-animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  -webkit-animation-delay: 1.1s;
+          animation-delay: 1.1s;
+}
+
 @-webkit-keyframes bodycome {
   0% {
     -webkit-transform: translateX(-400%);
@@ -318,6 +326,39 @@ body {
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+  }
+}
+
+@media screen and (max-height: 840px) {
+  .content {
+    background-color: #262626;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .card {
+    width: 90%;
+    height: 120%;
+  }
+  .back a {
+    color: white;
+    z-index: 10;
+  }
+  .menuresume {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .skillmain {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .containerresume p {
+    color: white;
   }
 }
 /*# sourceMappingURL=about.css.map */

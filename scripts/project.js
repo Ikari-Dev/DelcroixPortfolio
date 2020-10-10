@@ -1,7 +1,7 @@
 
 let itemsPersonnal = []
 let itemsTraining = []
-let item = new Item("L2 Project", "Second year project, we had to create a site on any theme using certain technology.", "../ressources/siteL2.jpg", "https://github.com/Ikari-Dev/L2WebProject", "https://ikari-dev.github.io/L2WebProject/")
+let item = new Item("Projet L2", "Projet de L2, créer un site web avec des contraintes technologiques(JS, HTML, CSS, CGI).", "../ressources/siteL2.jpg", "https://github.com/Ikari-Dev/L2WebProject", "https://ikari-dev.github.io/L2WebProject/")
 itemsTraining.push(item)
 
 function itemCreate(imgurl = "../ressources/font.jpg", projname = "Project Name",

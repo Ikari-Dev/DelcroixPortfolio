@@ -25,6 +25,15 @@ if(frameelement){
     });
 }
 
+const dataelement = document.querySelector("a.data")
+if(dataelement){
+    dataelement.addEventListener("click", e => {
+        
+        document.querySelector("p.skill").innerHTML = "XML, SQL"
+
+    });
+}
+
 const card = document.querySelector("div.card")
 if(card){
     card.addEventListener("mousemove", e => {
