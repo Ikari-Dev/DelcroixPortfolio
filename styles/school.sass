@@ -13,6 +13,7 @@ body
     height: 100vh
     font-family: 'Open Sans', sans-serif
     font-size: 1rem
+    overflow: hidden
 
 body:before
     content: ''
@@ -77,7 +78,7 @@ a
         margin-top: 10px
         margin-bottom: 10px
         transition: .3s ease-in
-        animation: anim-item 3.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+        
         box-shadow: 0 0 5px $second-color
         border-radius: 2px
 
@@ -94,7 +95,16 @@ a
 
         a:hover
             color: $main-color
-            
+
+
+.premier
+    animation: animcoming-3 2.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+
+.deuxieme
+    animation: animcoming-3 3s cubic-bezier(0.77, 0, 0.18, 1) forwards
+
+.troisieme
+    animation: animcoming-3 3.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
 
 @keyframes anim-item
     0%
@@ -114,3 +124,9 @@ a
         transform: translateY(-200%)
     100%
         transform: translateY(0%)
+
+@keyframes animcoming-3
+    0%
+        transform: translateX(-400%)
+    100%
+        transform: translateX(0%)

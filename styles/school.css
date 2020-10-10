@@ -17,6 +17,7 @@ body {
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
   font-size: 1rem;
+  overflow: hidden;
 }
 
 body:before {
@@ -109,8 +110,6 @@ a {
   margin-bottom: 10px;
   -webkit-transition: .3s ease-in;
   transition: .3s ease-in;
-  -webkit-animation: anim-item 3.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-          animation: anim-item 3.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
   -webkit-box-shadow: 0 0 5px #262626;
           box-shadow: 0 0 5px #262626;
   border-radius: 2px;
@@ -133,6 +132,21 @@ a {
 
 .content .card a:hover {
   color: #e5b31b;
+}
+
+.premier {
+  -webkit-animation: animcoming-3 2.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: animcoming-3 2.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+.deuxieme {
+  -webkit-animation: animcoming-3 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: animcoming-3 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+.troisieme {
+  -webkit-animation: animcoming-3 3.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: animcoming-3 3.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 
 @-webkit-keyframes anim-item {
@@ -194,6 +208,28 @@ a {
   100% {
     -webkit-transform: translateY(0%);
             transform: translateY(0%);
+  }
+}
+
+@-webkit-keyframes animcoming-3 {
+  0% {
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes animcoming-3 {
+  0% {
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 /*# sourceMappingURL=school.css.map */

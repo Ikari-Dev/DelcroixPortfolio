@@ -265,19 +265,23 @@ body:after {
 
 @-webkit-keyframes anim-card {
   0% {
-    opacity: 0;
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%);
   }
   100% {
-    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
 @keyframes anim-card {
   0% {
-    opacity: 0;
+    -webkit-transform: translateX(-400%);
+            transform: translateX(-400%);
   }
   100% {
-    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
   }
 }
 
