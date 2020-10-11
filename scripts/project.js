@@ -67,10 +67,6 @@ listpersonnal.addEventListener("click", function(){
     
     listtraining.classList.remove("active")
     listpersonnal.classList.add("active")
-
-    /*for(let i=0;i<5;i++){
-        itemCreate()
-    }*/
     
     itemsPersonnal.forEach(element => {
         itemCreate(element.img, element.name, element.description, element.linkCode, element.linkLive)
