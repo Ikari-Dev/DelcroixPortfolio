@@ -20,7 +20,7 @@ const frameelement = document.querySelector("a.frame")
 if(frameelement){
     frameelement.addEventListener("click", e => {
         
-        document.querySelector("p.skill").innerHTML = "Bootstrap"
+        document.querySelector("p.skill").innerHTML = "Bootstrap, Vue.JS(VUEX)"
 
     });
 }
@@ -30,6 +30,15 @@ if(dataelement){
     dataelement.addEventListener("click", e => {
         
         document.querySelector("p.skill").innerHTML = "XML, SQL"
+
+    });
+}
+
+const tools = document.querySelector("a.tools")
+if(tools){
+    tools.addEventListener("click", e => {
+        
+        document.querySelector("p.skill").innerHTML = "WebPack, Git, Linux, VSCode, Browser DevTools"
 
     });
 }

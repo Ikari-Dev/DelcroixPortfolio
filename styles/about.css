@@ -267,6 +267,14 @@ body {
           animation-delay: 1.1s;
 }
 
+.tools {
+  opacity: 0;
+  -webkit-animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: textcome 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  -webkit-animation-delay: 1.3s;
+          animation-delay: 1.3s;
+}
+
 @-webkit-keyframes bodycome {
   0% {
     -webkit-transform: translateX(-400%);
