@@ -1,12 +1,16 @@
 
 let itemsPersonnal = []
 let itemsTraining = []
-let item = new Item("Projet L2", "Projet de L2, créer un site web avec des contraintes technologiques(JS, HTML, CSS, CGI).", "../ressources/siteL2.jpg", "https://github.com/Ikari-Dev/L2WebProject", "https://ikari-dev.github.io/L2WebProject/")
+let item = new Item("Projet L2", "Projet de L2, créer un site web avec des contraintes technologiques(JS, HTML, CSS(Sass), CGI).", "../ressources/siteL2.jpg", "https://github.com/Ikari-Dev/L2WebProject", "https://ikari-dev.github.io/L2WebProject/")
+let item1 = new Item("UI/Foundation", "Projet foundation, travail sur frameworks css et sur l'UI(JS, HTML, CSS(Foundation+Sass)).", "../ressources/training.png", "https://github.com/Ikari-Dev/UI-Training-1", "https://ikari-dev.github.io/UI-Training-1/")
+let item2 = new Item("DungeonSeeker3", "Projet personnel, création d'un jeu video JS avec utilisation du frameworks Vue.js(JS, HTML, CSS(sass), Vue.js(VueX)).", "../ressources/dungeonSeeker.png", "https://github.com/Ikari-Dev/DungeonSeeker3", "")
 itemsTraining.push(item)
+itemsPersonnal.push(item1)
+itemsPersonnal.push(item2)
 
 function itemCreate(imgurl = "../ressources/font.jpg", projname = "Project Name",
  projdesc = "Project description, it can be teck, language or whatever, because is it funny to write some description for some project...",
- linkcode = "#", linklive = "#"){
+ linkcode = "#", linklive){
 
     let divItem = document.createElement("div")
     divItem.classList.add("item")
@@ -24,16 +28,20 @@ function itemCreate(imgurl = "../ressources/font.jpg", projname = "Project Name"
     linkun.classList.add("linkproj")
     linkun.setAttribute("href", linkcode)
     linkun.innerText = "Code"
-    let linkdeux = document.createElement("a")
-    linkdeux.classList.add("linkproj")
-    linkdeux.setAttribute("href", linklive)
-    linkdeux.innerText = "Live"
+    //if(linklive != null){
+        let linkdeux = document.createElement("a")
+        linkdeux.classList.add("linkproj")
+        linkdeux.setAttribute("href", linklive)
+        linkdeux.innerText = "Live"
+   // }
 
     divInfo.appendChild(htrois)
     divInfo.appendChild(pdesc)
     divInfo.appendChild(divlink)
     divlink.appendChild(linkun)
-    divlink.appendChild(linkdeux)
+    //if(linklive != null){
+        divlink.appendChild(linkdeux)
+    //}
     divItem.appendChild(img)
     divItem.appendChild(divInfo)
     let currentdiv = document.querySelector(".container")
