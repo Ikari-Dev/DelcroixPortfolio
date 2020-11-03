@@ -14,6 +14,8 @@ body
     font-family: 'Open Sans', sans-serif
     font-size: 1rem
 
+
+
 .container 
     display: flex
     flex-direction: column
@@ -23,7 +25,6 @@ body
     
     .item
         display: flex
-        flex-direction: row
         box-shadow: 0 0 5px $second-color
         overflow: hidden
         width: 100%
@@ -152,5 +153,16 @@ body
     0%
         opacity: 0
     100% 
-        opacity: 100%     
+        opacity: 100%    
 
+
+
+@media screen and ( max-width: 910px )
+   
+    div.item
+        display: flex
+        flex-direction: column
+        padding: 1em
+
+        img
+            display: none
