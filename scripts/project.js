@@ -1,9 +1,9 @@
 
 let itemsPersonnal = []
 let itemsTraining = []
-let item = new Item("Projet L2", "Projet de L2, créer un site web avec des contraintes technologiques(JS, HTML, CSS(Sass), CGI).", "../ressources/siteL2.jpg", "https://github.com/Ikari-Dev/L2WebProject", "https://ikari-dev.github.io/L2WebProject/")
-let item1 = new Item("Pictionnary", "Projet foundation, travail sur frameworks css et sur l'UI(JS, HTML, CSS(Foundation+Sass)).", "../ressources/training.png", "https://github.com/Ikari-Dev/UI-Training-1", "https://ikari-dev.github.io/UI-Training-1/")
-let item2 = new Item("DungeonSeeker3", "Projet personnel, création d'un jeu video JS avec utilisation du frameworks Vue.js(JS, HTML, CSS(sass), Vue.js(VueX)).", "../ressources/dungeonSeeker.png", "https://github.com/Ikari-Dev/DungeonSeeker3", "")
+let item = new Item("Projet L2", "Projet de L2, créer un site web avec des contraintes technologiques(JS, HTML, CSS(Sass), CGI).", "/../ressources/siteL2.jpg", "https://github.com/Ikari-Dev/L2WebProject", "https://ikari-dev.github.io/L2WebProject/")
+let item1 = new Item("Pictionnary", "Projet foundation, travail sur frameworks css et sur l'UI(JS, HTML, CSS(Foundation+Sass)).", "/../ressources/training.png", "https://github.com/Ikari-Dev/UI-Training-1", "https://ikari-dev.github.io/UI-Training-1/")
+let item2 = new Item("DungeonSeeker3", "Projet personnel, création d'un jeu video JS avec utilisation du frameworks Vue.js(JS, HTML, CSS(sass), Vue.js(VueX)).", "/../ressources/dungeonSeeker.png", "https://github.com/Ikari-Dev/DungeonSeeker3", "")
 itemsTraining.push(item)
 itemsPersonnal.push(item1)
 itemsPersonnal.push(item2)
