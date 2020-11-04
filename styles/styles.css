@@ -320,6 +320,11 @@ i {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
+.facebook {
+  color: #e5b31b;
+  font-size: 1.4em;
+}
+
 @media screen and (max-width: 460px) {
   .navlist {
     -webkit-box-orient: vertical;
