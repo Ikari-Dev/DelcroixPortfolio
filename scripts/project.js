@@ -4,9 +4,11 @@ let itemsTraining = []
 let item = new Item("Projet L2", "Projet de L2, créer un site web avec des contraintes technologiques(JS, HTML, CSS(Sass), CGI).", "../ressources/siteL2.jpg", "https://github.com/Ikari-Dev/L2WebProject", "https://ikari-dev.github.io/L2WebProject/")
 let item1 = new Item("Pictionnary", "Projet foundation, travail sur frameworks css et sur l'UI(JS, HTML, CSS(Foundation+Sass)).", "../ressources/training.jpg", "https://github.com/Ikari-Dev/UI-Training-1", "https://ikari-dev.github.io/UI-Training-1/")
 let item2 = new Item("DungeonSeeker3", "Projet personnel, création d'un jeu video JS avec utilisation du frameworks Vue.js(JS, HTML, CSS(sass), Vue.js(VueX)).", "../ressources/dungeonSeeker.jpg", "https://github.com/Ikari-Dev/DungeonSeeker3", "")
+let item3 = new Item("MangaList", "Projet personnel, création d'une bibilotheque de manga (HTML5, CSS3(SASS), JS ES6).", "../ressources/mangalist.jpg", "https://github.com/Ikari-Dev/MangaList", "https://ikari-dev.github.io/MangaList/")
 itemsTraining.push(item)
 itemsPersonnal.push(item1)
 itemsPersonnal.push(item2)
+itemsPersonnal.push(item3)
 
 function itemCreate(imgurl = "../ressources/font.jpg", projname = "Project Name",
  projdesc = "Project description, it can be teck, language or whatever, because is it funny to write some description for some project...",
