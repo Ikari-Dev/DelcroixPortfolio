@@ -4,7 +4,7 @@ let itemsTraining = []
 let item = new Item("Projet L2", "Projet de L2, créer un site web avec des contraintes technologiques(JS, HTML, CSS(Sass), CGI).", "../ressources/siteL2.jpg", "https://github.com/Ikari-Dev/L2WebProject", "https://ikari-dev.github.io/L2WebProject/")
 let item1 = new Item("Pictionnary", "Projet foundation, travail sur frameworks css et sur l'UI(JS, HTML, CSS(Foundation+Sass)).", "../ressources/training.jpg", "https://github.com/Ikari-Dev/UI-Training-1", "https://ikari-dev.github.io/UI-Training-1/")
 let item2 = new Item("DungeonSeeker3", "Projet personnel, création d'un jeu video JS avec utilisation du frameworks Vue.js(JS, HTML, CSS(sass), Vue.js(VueX)).", "../ressources/dungeonSeeker.jpg", "https://github.com/Ikari-Dev/DungeonSeeker3", "")
-let item3 = new Item("MangaList", "Projet personnel, création d'une bibilotheque de manga (HTML5, CSS3(SASS), JS ES6).", "../ressources/mangalist.jpg", "https://github.com/Ikari-Dev/MangaList", "https://ikari-dev.github.io/MangaList/")
+let item3 = new Item("MangaList", "Projet personnel, création d'une bibilotheque de manga (HTML5, CSS3(SASS), JS ES6).", "../ressources/mangalist.png", "https://github.com/Ikari-Dev/MangaList", "https://ikari-dev.github.io/MangaList/")
 let item4 = new Item("Projet L3", "Projet en binome de L3, créer un blog, pas de contrainte technologiques, je me suis personnelement occupé de la partie FrontEnd(HTML5, CSS3(SASS), VueJs(VueRouter, VueX, Axios)","../ressources/tmp.jpg","https://github.com/0auBSQ/MiniBlog","")
 itemsTraining.push(item)
 itemsTraining.push(item4)
