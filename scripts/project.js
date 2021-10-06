@@ -30,20 +30,22 @@ function itemCreate(imgurl = "../ressources/font.jpg", projname = "Project Name"
     linkun.classList.add("linkproj")
     linkun.setAttribute("href", linkcode)
     linkun.innerText = "Code"
-    //if(linklive != null){
-        let linkdeux = document.createElement("a")
-        linkdeux.classList.add("linkproj")
-        linkdeux.setAttribute("href", linklive)
-        linkdeux.innerText = "Live"
-   // }
+    
+    let linkdeux = document.createElement("a")
+    linkdeux.classList.add("linkproj")
+    linkdeux.setAttribute("href", linklive)
+    linkdeux.innerText = "Live"
+   
 
     divInfo.appendChild(htrois)
     divInfo.appendChild(pdesc)
     divInfo.appendChild(divlink)
     divlink.appendChild(linkun)
-    //if(linklive != null){
-        divlink.appendChild(linkdeux)
-    //}
+
+    divlink.appendChild(linkdeux)
+    if(linklive == ""){
+        linkdeux.style.display = "none"
+    }
     divItem.appendChild(img)
     divItem.appendChild(divInfo)
     let currentdiv = document.querySelector(".container")
