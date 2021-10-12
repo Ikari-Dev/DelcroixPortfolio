@@ -16,38 +16,53 @@
         <div class="back">
             
             <a class="linkmenu" href="contact.html">Contact</a>
-            <a class="linkmenu" href="about.html">About</a>
+            <a class="linkmenu" href="about.html">Skills</a>
             <a class="linkmenu" href="../index.html">Home</a>
             <a class="linkmenu" href="project.html">Project</a>
         </div>
     </header>
 
     <div class="content">
-
-        <div class="card premier">
-            <h3 class="intitule">Licence Informatique</h3>
-            <p class="info">BAC +3 - Informatique option Base de données</p>
+        <div class="card premier master" style="display: block;">
+            <h3 class="intitule">Master Informatique</h3>
+            <p class="info">BAC +5 - Informatique</p>
             <p class="address">Université de Clermont-Ferrand 63000 - France</p>
-            <a href="https://www.uca.fr/formation/nos-formations/catalogue-des-formations/licence-informatique-10075.kjsp?RH=1483950553467" class="lienformation">Détail</a>
+            <a href="https://www.uca.fr/formation/nos-formations/catalogue-des-formations/master-info" class="lienformation">Détail</a>
 
         </div>
-        <div class="card deuxieme">
+
+        <div class="card premier licence">
+            <h3 class="intitule">Licence Informatique</h3>
+            <p class="info">BAC +3 - Informatique</p>
+            <p class="address">Université de Clermont-Ferrand 63000 - France</p>
+            <a href="https://www.uca.fr/formation/nos-formations/catalogue-des-formations/licence-informatique" class="lienformation">Détail</a>
+
+        </div>
+        <div class="card premier dut">
             <h3 class="intitule">DUT Informatique</h3>
             <p class="info">BAC +2 - Informatique</p>
             <p class="address">Université de Clermont-Ferrand 63000 - France</p>
-            <a href="https://www.uca.fr/formation/nos-formations/catalogue-des-formations/dut-informatique-11270.kjsp?RH=1483954617119" class="lienformation">Détail</a>
+            <a href="https://www.uca.fr/formation/nos-formations/catalogue-des-formations/but-informatique-clermont" class="lienformation">Détail</a>
             
         </div>
-        <div class="card troisieme">
+        <div class="card premier lycee">
             <h3 class="intitule">BAC STI2D</h3>
-            <p class="info">BAC Sciences et Technologie de l'Industrie et du Dévelopement Durable</p>
+            <p class="info">BAC Sciences et Technologie de <br> L'Industrie et du Dévelopement Durable</p>
             <p class="address">Lycée Jean Monnet - Yzeure 03400 - France</p>
             <a href="https://www.lycee-jeanmonnet-yzeure.fr/course/bac-sti2d-sciences-et-technologies-de-lindustrie-et-du-developpement-durable-specialite-systeme-dinformation-numerique/" class="lienformation">Détail</a>
 
         </div>
 
+        <div class="flux">
+            <input id="master" class="formation" type="radio" checked>
+            <input id="licence" class="formation" type="radio">
+            <input id="dut" class="formation" type="radio">
+            <input id="lycee" class="formation" type="radio">
+        </div>
+
     </div>
     <script src="../scripts/tools.js"></script>
+    <script src="../scripts/school.js"></script>
 
 </body>
 </html>

@@ -20,7 +20,7 @@ const frameelement = document.querySelector("a.frame")
 if(frameelement){
     frameelement.addEventListener("click", e => {
         
-        document.querySelector("p.skill").innerHTML = "Bootstrap, Vue.JS(VUEX)"
+        document.querySelector("p.skill").innerHTML = "Bootstrap, Vue.JS(VUEX, Vue Router), SveltJs"
 
     });
 }
@@ -29,7 +29,7 @@ const dataelement = document.querySelector("a.data")
 if(dataelement){
     dataelement.addEventListener("click", e => {
         
-        document.querySelector("p.skill").innerHTML = "XML, SQL"
+        document.querySelector("p.skill").innerHTML = "XML, SQL, Json, MongoDB"
 
     });
 }
@@ -66,34 +66,34 @@ if(card){
 }
 
 
-const toggleLang = document.querySelector("a.facebook")
-if(toggleLang){
+const toggleLang = document.querySelector("a.lang")
+if(toggleLang){/*
     toggleLang.addEventListener("click", e => {
-        /*switch (toggleLang.innerHTML) {
+        switch (toggleLang.innerHTML) {
             case "FR":
                 toggleLang.innerHTML = "EN"
                 break;
             
             case "EN":
-                toggleLang.innerHTML = "JAP"
+                toggleLang.innerHTML = "JP"
+
                 break;
 
-            case "JAP":
+            case "JP":
                 toggleLang.innerHTML = "FR"
+
                 break;
         
             default:
                 toggleLang.innerHTML = "FR"
                 break;
-        }*/
+        }
         changeLang(toggleLang.innerHTML.toLocaleLowerCase)
-    })
+    })*/
 }
 
-function changeLang(filename){
-    let path = "../data/"
-    let ext = ".json"
-    let file = path.concat(toggleLang.innerHTML.toLocaleLowerCase(), ext)
+function changeLang(language){
+    let file = "../data/lang.json"
     fetch(file)
     .then(response => response.json())
     .then(json => {

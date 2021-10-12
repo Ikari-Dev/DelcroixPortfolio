@@ -35,6 +35,21 @@ body:before {
           animation: animcoming-1 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 
+body:after {
+  content: '';
+  position: absolute;
+  background-color: #262626;
+  top: 0;
+  left: 12.5%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  -webkit-clip-path: polygon(48.5% 0, 52% 0, 52% 100%, 48.5% 100%);
+          clip-path: polygon(48.5% 0, 52% 0, 52% 100%, 48.5% 100%);
+  -webkit-animation: animcoming-1 1.4s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: animcoming-1 1.4s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
 a {
   text-decoration: none;
 }
@@ -91,15 +106,17 @@ a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: auto;
+  -webkit-animation: animcoming-5 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: animcoming-5 2s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 
 .content .card {
-  display: block;
+  display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -108,8 +125,10 @@ a {
   padding: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
+  margin-right: 5px;
   -webkit-transition: .3s ease-in;
   transition: .3s ease-in;
+  width: 25vw;
   -webkit-box-shadow: 0 0 5px #262626;
           box-shadow: 0 0 5px #262626;
   border-radius: 2px;
@@ -134,19 +153,36 @@ a {
   color: #e5b31b;
 }
 
+.flux {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-animation: anim-item 8s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: anim-item 8s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
+.formation {
+  margin: .7rem;
+  width: 1.5em;
+  height: 1.5em;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
+  cursor: pointer;
+}
+
+.formation:checked {
+  -webkit-transform: translateX(10px);
+          transform: translateX(10px);
+  color: #262626;
+}
+
 .premier {
-  -webkit-animation: animcoming-3 2.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-          animation: animcoming-3 2.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-}
-
-.deuxieme {
-  -webkit-animation: animcoming-3 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-          animation: animcoming-3 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-}
-
-.troisieme {
-  -webkit-animation: animcoming-3 3.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
-          animation: animcoming-3 3.5s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+  -webkit-animation: animcoming-3 0.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: animcoming-3 0.3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
 }
 
 @-webkit-keyframes anim-item {
@@ -213,10 +249,15 @@ a {
 
 @-webkit-keyframes animcoming-3 {
   0% {
-    -webkit-transform: translateX(-400%);
-            transform: translateX(-400%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
   }
   100% {
+    opacity: 1;
     -webkit-transform: translateX(0%);
             transform: translateX(0%);
   }
@@ -224,8 +265,61 @@ a {
 
 @keyframes animcoming-3 {
   0% {
-    -webkit-transform: translateX(-400%);
-            transform: translateX(-400%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes animcoming-4 {
+  0% {
+    -webkit-transform: translateX(-600%);
+            transform: translateX(-600%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes animcoming-4 {
+  0% {
+    -webkit-transform: translateX(-600%);
+            transform: translateX(-600%);
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@-webkit-keyframes animcoming-5 {
+  0% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
+  }
+  100% {
+    -webkit-transform: translateX(0%);
+            transform: translateX(0%);
+  }
+}
+
+@keyframes animcoming-5 {
+  0% {
+    -webkit-transform: translateX(300%);
+            transform: translateX(300%);
   }
   100% {
     -webkit-transform: translateX(0%);

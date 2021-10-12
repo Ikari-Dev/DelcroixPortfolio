@@ -56,6 +56,18 @@ a
     display: block
     justify-content: center
 
+.right
+    position: absolute
+    bottom: 0
+    justify-content: center
+    width: 100%
+    display: flex
+    color: white
+    font-size: .8em
+    animation: base 6s cubic-bezier(0.77, 0, 0.18, 1) forwards
+
+
+
 .anim:before
     content: ''
     position: absolute
@@ -140,7 +152,7 @@ a
 .linkedin
     animation-delay: 1.9s
 
-.facebook
+.lang
     animation-delay: 2.3s
 
 h1
@@ -150,7 +162,7 @@ h1
 
 h4 
     display: block
-    font-family: 'Shadows Into Light', cursive
+    font-family: 'Dancing Script', cursive
     font-size: 1.5rem
     animation: base 3s cubic-bezier(0.77, 0, 0.18, 1) forwards
     color: $gold
@@ -189,7 +201,7 @@ i
     color: $gold
     background-color: rgba(0 , 0 , 0 , .15)
 
-.facebook 
+.lang 
     color: $gold
     font-size: 1.4em
 
@@ -214,6 +226,9 @@ i
     .link 
         max-height: 10vh
         top: 0
+
+    .right
+        display: none
 
 
     

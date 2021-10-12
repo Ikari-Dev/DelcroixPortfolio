@@ -68,6 +68,22 @@ a:hover {
           justify-content: center;
 }
 
+.right {
+  position: absolute;
+  bottom: 0;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
+  font-size: .8em;
+  -webkit-animation: base 6s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+          animation: base 6s cubic-bezier(0.77, 0, 0.18, 1) forwards;
+}
+
 .anim:before {
   content: '';
   position: absolute;
@@ -243,7 +259,7 @@ a:hover {
           animation-delay: 1.9s;
 }
 
-.facebook {
+.lang {
   -webkit-animation-delay: 2.3s;
           animation-delay: 2.3s;
 }
@@ -257,7 +273,7 @@ h1 {
 
 h4 {
   display: block;
-  font-family: 'Shadows Into Light', cursive;
+  font-family: 'Dancing Script', cursive;
   font-size: 1.5rem;
   -webkit-animation: base 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
           animation: base 3s cubic-bezier(0.77, 0, 0.18, 1) forwards;
@@ -320,7 +336,7 @@ i {
   background-color: rgba(0, 0, 0, 0.15);
 }
 
-.facebook {
+.lang {
   color: #e5b31b;
   font-size: 1.4em;
 }
@@ -350,6 +366,9 @@ i {
   .link {
     max-height: 10vh;
     top: 0;
+  }
+  .right {
+    display: none;
   }
 }
 /*# sourceMappingURL=styles.css.map */

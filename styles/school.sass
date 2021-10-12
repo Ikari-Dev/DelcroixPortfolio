@@ -27,6 +27,17 @@ body:before
     clip-path: polygon(100% 10%, 100% 48%, 67% 100%, 37% 100%)
     animation: animcoming-1 1.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
 
+body:after
+    content: ''
+    position: absolute
+    background-color: $second-color
+    top: 0
+    left: 12.5%
+    width: 100%
+    height: 100%
+    z-index: -1
+    clip-path: polygon(48.5% 0, 52% 0, 52% 100%, 48.5% 100%)
+    animation: animcoming-1 1.4s cubic-bezier(0.77, 0, 0.18, 1) forwards
 
 a
     text-decoration: none
@@ -66,19 +77,22 @@ a
 
 .content 
     display: flex
-    flex-direction: column 
+    flex-direction: row 
     margin: auto
+    animation: animcoming-5 2s cubic-bezier(0.77, 0, 0.18, 1) forwards
+
 
     .card
-        display: block
+        display: none
         align-items: center
         margin: auto
         background-color: $second-color
         padding: 10px
         margin-top: 10px
         margin-bottom: 10px
+        margin-right: 5px
         transition: .3s ease-in
-        
+        width: 25vw
         box-shadow: 0 0 5px $second-color
         border-radius: 2px
 
@@ -96,15 +110,29 @@ a
         a:hover
             color: $main-color
 
+.flux
+    display: flex
+    flex-direction: column
+    animation: anim-item 8s cubic-bezier(0.77, 0, 0.18, 1) forwards
+   
+
+.formation
+    margin: .7rem
+    width: 1.5em
+    height: 1.5em
+    transition: all .3s ease
+    cursor: pointer
+    
+
+    &:checked 
+        transform: translateX(10px)
+        color: $second-color
+
+
 
 .premier
-    animation: animcoming-3 2.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
+    animation: animcoming-3 .3s cubic-bezier(0.77, 0, 0.18, 1) forwards
 
-.deuxieme
-    animation: animcoming-3 3s cubic-bezier(0.77, 0, 0.18, 1) forwards
-
-.troisieme
-    animation: animcoming-3 3.5s cubic-bezier(0.77, 0, 0.18, 1) forwards
 
 @keyframes anim-item
     0%
@@ -127,6 +155,24 @@ a
 
 @keyframes animcoming-3
     0%
-        transform: translateX(-400%)
+        transform: translateX(100%)
+        opacity: 0
+    60%
+        opacity: 0
+    100%
+        opacity: 1
+        transform: translateX(0%)
+
+@keyframes animcoming-4
+    0%
+        transform: translateX(-600%)
+        opacity: 0
+    100%
+        opacity: 1
+        transform: translateX(0%)
+
+@keyframes animcoming-5
+    0%
+        transform: translateX(300%)
     100%
         transform: translateX(0%)
