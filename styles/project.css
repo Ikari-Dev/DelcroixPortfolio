@@ -65,6 +65,7 @@ body {
           flex-direction: column;
   margin: auto;
   padding-left: 2vw;
+  overflow: auto;
 }
 
 .container .item .info h3, .container .item .info p {
